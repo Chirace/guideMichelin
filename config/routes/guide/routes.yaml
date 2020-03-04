@@ -1,0 +1,19 @@
+guide_accueil:
+  path: /accueil
+  controller: App\Controller\GuideController::accueil
+
+guide_menu:
+  path: /menu
+  controller: App\Controller\GuideController::menu
+
+guide_restaurants:
+  path: /restaurants
+  controller: App\Controller\GuideController::restaurants
+
+guide_chefs:
+  path: /chefs
+  controller: App\Controller\GuideController::chefs
+
+guide_plats:
+  path: /plats
+  controller: App\Controller\GuideController::plats

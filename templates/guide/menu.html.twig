@@ -1,0 +1,20 @@
+{% extends "layoutgeneral.html.twig" %}
+{% block titre %}
+    {{ parent() }} : Menu
+{% endblock %}
+
+{% block contenu %}
+    <h3>Restaurants</h3>
+    
+    <p><a href="{{ path('guide_restaurants') }}">Voir les restaurants</a></p>
+
+    <h3>Chefs</h3>
+    
+    <p><a href="{{ path('guide_chefs') }}">Voir les chefs</a></p>
+
+    <h3>Plats</h3>
+    
+    <p><a href="{{ path('guide_plats') }}">Voir les plats</a></p>
+
+    <p><a href="{{ path('guide_accueil') }}">Retour à l'accueil</a></p>
+{% endblock %}
