@@ -26,6 +26,14 @@ class GuideController extends AbstractController{
         return $this->render('guide/plat.html.twig');
     }
 
+    public function voirRestaurant($id) {
+        $restaurant = $this->getDoctrine()->getRepository(Restaurant::class)->find($id);
+        if(!$restaurant)
+        throw $this->createNotFoundException('Restaurant[id='.$id.'] inexistante');
+        return $this->render('guide/restaurant/voir.html.twig', 
+        array('restaurant' => $restaurant));
+        }
+
     /*public function accueil() {
         return new Response("<html><body><h1>Guide Michelin</h1> <p>Trouver un restaurant</p></body></html>");
     }

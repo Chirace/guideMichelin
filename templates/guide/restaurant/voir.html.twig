@@ -1,0 +1,13 @@
+{% extends "layoutgeneral.html.twig" %}
+{% block titre %}
+    {{ parent() }} : Restaurant (id={{ restaurant.id }})
+{% endblock %}
+{% block contenu %}
+<ul>
+    <li>Nom {{ restaurant.nom }}</li>
+    <li>Chef {{ restaurant.chef }}</li>
+    <li>Nombre étoile {{ restaurant.nombre_etoile }}</li>
+</ul>
+<p><a href="{{ path('restaurant_modifier', { 'id': restaurant.id }) }}">
+ modifier le restaurant</a></p>
+{% endblock %}

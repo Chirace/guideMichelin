@@ -17,3 +17,15 @@ guide_chefs:
 guide_plats:
   path: /plats
   controller: App\Controller\GuideController::plats
+
+restaurant_voir:
+  path: /restaurant/voir/{id}
+  controller: App\Controller\GuideController::voir
+  requirements:
+    numero: \d+
+
+restaurant_modifier:
+  path: /restaurant/modifier/{id}
+  controller: App\Controller\GuideController::modifier
+  requirements:
+    id: \d+
